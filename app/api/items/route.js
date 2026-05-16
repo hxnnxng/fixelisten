@@ -1,5 +1,7 @@
 import { query, initDb } from '@/lib/db';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   await initDb();
   const res = await query('SELECT * FROM items ORDER BY id ASC');
