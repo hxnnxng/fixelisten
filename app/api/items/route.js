@@ -4,7 +4,7 @@ export const dynamic = 'force-dynamic';
 
 export async function GET() {
   await initDb();
-  const res = await query('SELECT * FROM items ORDER BY priority DESC, id ASC');
+  const res = await query('SELECT * FROM items ORDER BY priority ASC, id ASC');
   return Response.json(res.rows);
 }
 
